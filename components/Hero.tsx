@@ -120,7 +120,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <motion.div style={{ opacity }} className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full pt-32 pb-8">
+      <motion.div style={{ opacity }} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 w-full pt-24 pb-8 text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -160,7 +160,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex items-center gap-2 text-purple-400 text-sm mb-4"
+          className="flex items-center justify-center gap-2 text-purple-400 text-sm mb-4"
         >
           <Clock size={13} />
           By appointment only — book your free quote online
@@ -180,7 +180,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-3 mb-8"
+          className="flex flex-col sm:flex-row gap-3 mb-8 justify-center"
         >
           <Link
             href="/book"
@@ -207,7 +207,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto"
         >
           {stats.map((s, i) => (
             <div key={s.label} className="glass-card rounded-xl p-3 text-center">

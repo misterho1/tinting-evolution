@@ -30,36 +30,36 @@ export default function Navbar() {
           scrolled ? 'bg-navy-950/95 backdrop-blur-xl border-b border-purple-900/30 shadow-lg shadow-purple-950/20' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src="/logo.png" alt="Tinting Evolution" className="h-14 w-auto" style={{ mixBlendMode: 'screen' }} />
-            <span className="font-bebas text-3xl text-white tracking-wider hidden sm:block leading-none whitespace-nowrap">
+        <div className="w-full px-6 flex items-center justify-between h-16">
+          {/* Logo + brand */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <img src="/logo.png" alt="Tinting Evolution" className="h-10 w-auto" style={{ mixBlendMode: 'screen' }} />
+            <span className="font-bebas text-2xl text-white tracking-wider hidden lg:block leading-none whitespace-nowrap">
               Tinting <span className="text-purple-500">Evolution</span>
             </span>
           </Link>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-6 flex-shrink-0">
+          {/* Desktop links — all on one line */}
+          <div className="hidden md:flex items-center gap-5 flex-shrink-0">
             {links.slice(0, 2).map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-base text-gray-300 hover:text-white transition-colors font-medium whitespace-nowrap"
+                className="text-sm text-gray-300 hover:text-white transition-colors font-medium whitespace-nowrap"
               >
                 {l.label}
               </Link>
             ))}
             <a
               href="tel:(801) 414-4486"
-              className="flex items-center gap-1.5 text-base text-gray-300 hover:text-white transition-colors font-medium whitespace-nowrap"
+              className="flex items-center gap-1.5 text-sm text-gray-300 hover:text-white transition-colors font-medium whitespace-nowrap"
             >
-              <Phone size={15} className="text-purple-500 flex-shrink-0" />
+              <Phone size={14} className="text-purple-500 flex-shrink-0" />
               (801) 414-4486
             </a>
             <Link
               href="/book"
-              className="bg-purple-600 hover:bg-purple-500 text-white text-base font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-lg shadow-purple-600/30 whitespace-nowrap"
+              className="bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-purple-600/30 whitespace-nowrap"
             >
               Book Free Quote
             </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            {open ? <X size={26} /> : <Menu size={26} />}
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </motion.nav>
