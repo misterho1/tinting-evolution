@@ -30,11 +30,11 @@ export default function Navbar() {
           scrolled ? 'bg-navy-950/95 backdrop-blur-xl border-b border-purple-900/30 shadow-lg shadow-purple-950/20' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Tinting Evolution" className="h-10 w-auto" />
-            <span className="font-bebas text-xl text-white tracking-wider hidden sm:block">
+          <Link href="/" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Tinting Evolution" className="h-20 w-auto" />
+            <span className="font-bebas text-4xl text-white tracking-wider hidden sm:block">
               Tinting <span className="text-purple-500">Evolution</span>
             </span>
           </Link>
@@ -45,21 +45,21 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm text-gray-300 hover:text-white transition-colors"
+                className="text-xl text-gray-300 hover:text-white transition-colors"
               >
                 {l.label}
               </Link>
             ))}
             <a
               href="tel:(801) 414-4486"
-              className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-xl text-gray-300 hover:text-white transition-colors"
             >
-              <Phone size={14} className="text-purple-500" />
+              <Phone size={18} className="text-purple-500" />
               (801) 414-4486
             </a>
             <Link
               href="/book"
-              className="bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              className="bg-purple-600 hover:bg-purple-500 text-white text-xl font-medium px-6 py-3 rounded-lg transition-colors"
             >
               Book Free Quote
             </Link>
