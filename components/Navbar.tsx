@@ -30,36 +30,36 @@ export default function Navbar() {
           scrolled ? 'bg-navy-950/95 backdrop-blur-xl border-b border-purple-900/30 shadow-lg shadow-purple-950/20' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between h-28">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="Tinting Evolution" className="h-20 w-auto" />
-            <span className="font-bebas text-4xl text-white tracking-wider hidden sm:block">
+          <Link href="/" className="flex items-center gap-4">
+            <img src="/logo.png" alt="Tinting Evolution" className="h-24 w-auto" />
+            <span className="font-bebas text-5xl text-white tracking-wider hidden sm:block leading-none">
               Tinting <span className="text-purple-500">Evolution</span>
             </span>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {links.slice(0, 2).map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-xl text-gray-300 hover:text-white transition-colors"
+                className="text-2xl text-gray-300 hover:text-white transition-colors font-medium"
               >
                 {l.label}
               </Link>
             ))}
             <a
               href="tel:(801) 414-4486"
-              className="flex items-center gap-2 text-xl text-gray-300 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-2xl text-gray-300 hover:text-white transition-colors font-medium"
             >
-              <Phone size={18} className="text-purple-500" />
+              <Phone size={22} className="text-purple-500" />
               (801) 414-4486
             </a>
             <Link
               href="/book"
-              className="bg-purple-600 hover:bg-purple-500 text-white text-xl font-medium px-6 py-3 rounded-lg transition-colors"
+              className="bg-purple-600 hover:bg-purple-500 text-white text-2xl font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-purple-600/30"
             >
               Book Free Quote
             </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={30} /> : <Menu size={30} />}
           </button>
         </div>
       </motion.nav>
