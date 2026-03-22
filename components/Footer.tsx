@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="Tinting Evolution" className="h-12 w-auto" />
+              <img src="/logo.png" alt="Tinting Evolution" className="h-12 w-auto" style={{ mixBlendMode: 'screen' }} />
               <div>
                 <div className="font-bebas text-xl text-white tracking-wider">Tinting Evolution</div>
                 <div className="text-purple-500 text-xs">Premium Window Tinting</div>

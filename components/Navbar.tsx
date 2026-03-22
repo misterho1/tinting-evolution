@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-4">
-            <img src="/logo.png" alt="Tinting Evolution" className="h-24 w-auto" />
+            <img src="/logo.png" alt="Tinting Evolution" className="h-24 w-auto" style={{ mixBlendMode: 'screen' }} />
             <span className="font-bebas text-5xl text-white tracking-wider hidden sm:block leading-none">
               Tinting <span className="text-purple-500">Evolution</span>
             </span>
