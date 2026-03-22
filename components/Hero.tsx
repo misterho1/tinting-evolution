@@ -227,7 +227,11 @@ function AnimatedCar() {
             ))}
           </motion.div>
         )}
-        <EvoCarSVG />
+        <img
+          src="/car.png"
+          alt="Purple Evo"
+          style={{ height: '180px', width: 'auto', filter: 'drop-shadow(0 0 24px rgba(147,51,234,0.6))' }}
+        />
       </motion.div>
     </div>
   )
