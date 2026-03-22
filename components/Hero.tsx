@@ -1,8 +1,8 @@
 'use client'
-import { useRef, useEffect, useState } from 'react'
-import { motion, useScroll, useTransform, useAnimate, useMotionValue, useSpring } from 'framer-motion'
+import { useRef, useState, useEffect } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
-import { Shield, Star, Clock, ChevronDown, Car } from 'lucide-react'
+import { Star, Clock, ChevronDown } from 'lucide-react'
 
 const stats = [
   { value: '500+', label: 'Cars Tinted' },
@@ -11,89 +11,223 @@ const stats = [
   { value: 'Lifetime', label: 'Guarantee' },
 ]
 
+// Mitsubishi Lancer Evo-style SVG car facing RIGHT, purple body, gold wheels
+function EvoCarSVG() {
+  return (
+    <svg viewBox="0 0 420 160" width="420" height="160" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#a855f7" />
+          <stop offset="50%" stopColor="#7e22ce" />
+          <stop offset="100%" stopColor="#4c1d95" />
+        </linearGradient>
+        <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#c084fc" />
+          <stop offset="100%" stopColor="#7e22ce" />
+        </linearGradient>
+        <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#1e1b4b" stopOpacity="0.9" />
+          <stop offset="100%" stopColor="#0f0a1e" stopOpacity="0.95" />
+        </linearGradient>
+        <linearGradient id="wheelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#d97706" />
+          <stop offset="100%" stopColor="#92400e" />
+        </linearGradient>
+        <radialGradient id="tireGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#1c1c1c" />
+          <stop offset="100%" stopColor="#0a0a0a" />
+        </radialGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      {/* Shadow under car */}
+      <ellipse cx="210" cy="148" rx="170" ry="8" fill="rgba(0,0,0,0.4)" />
+
+      {/* === BODY === */}
+      {/* Main lower body */}
+      <path d="M55 105 Q60 88 80 85 L340 85 Q365 85 375 100 L385 118 Q385 128 375 130 L55 130 Q45 130 45 120 Z"
+        fill="url(#bodyGrad)" />
+
+      {/* Roof / cabin */}
+      <path d="M130 85 Q145 55 175 48 L285 48 Q315 50 330 65 L345 85 Z"
+        fill="url(#roofGrad)" />
+
+      {/* Rear spoiler */}
+      <rect x="60" y="79" width="55" height="4" rx="2" fill="#d8b4fe" opacity="0.8" />
+      <rect x="72" y="73" width="4" height="10" rx="1" fill="#a855f7" />
+      <rect x="95" y="73" width="4" height="10" rx="1" fill="#a855f7" />
+
+      {/* Front bumper / splitter */}
+      <path d="M370 105 L390 108 L392 118 L370 118 Z" fill="#4c1d95" />
+      <rect x="372" y="120" width="20" height="4" rx="1" fill="#7e22ce" opacity="0.8" />
+
+      {/* === WINDOWS === */}
+      {/* Rear window */}
+      <path d="M134 84 Q148 58 175 52 L200 52 L195 84 Z"
+        fill="url(#windowGrad)" opacity="0.85" />
+      {/* Front window */}
+      <path d="M200 52 L285 50 Q310 52 325 65 L335 84 L200 84 Z"
+        fill="url(#windowGrad)" opacity="0.85" />
+      {/* Window frame lines */}
+      <path d="M134 84 Q148 58 175 52 L200 52 L195 84 Z"
+        fill="none" stroke="#c084fc" strokeWidth="1" opacity="0.4" />
+      <path d="M200 52 L285 50 Q310 52 325 65 L335 84 L200 84 Z"
+        fill="none" stroke="#c084fc" strokeWidth="1" opacity="0.4" />
+      {/* B-pillar */}
+      <line x1="197" y1="52" x2="197" y2="85" stroke="#3b0764" strokeWidth="5" />
+
+      {/* === HEADLIGHT (right/front) === */}
+      <path d="M358 95 L380 97 L382 110 L358 112 Z" fill="#e9d5ff" opacity="0.15" />
+      <path d="M360 97 L378 99 L379 108 L360 110 Z" fill="white" opacity="0.9" />
+      <line x1="363" y1="100" x2="377" y2="100" stroke="#fbbf24" strokeWidth="1.5" opacity="0.6" />
+      <line x1="363" y1="104" x2="377" y2="104" stroke="#fbbf24" strokeWidth="1" opacity="0.4" />
+
+      {/* === TAIL LIGHT (left/rear) === */}
+      <path d="M58 96 L75 95 L75 112 L58 113 Z" fill="#dc2626" opacity="0.7" />
+      <path d="M60 98 L73 97 L73 111 L60 111 Z" fill="#ef4444" opacity="0.5" />
+      <line x1="63" y1="100" x2="71" y2="100" stroke="#fca5a5" strokeWidth="1.5" opacity="0.8" />
+
+      {/* Body side line / crease */}
+      <path d="M75 108 Q200 102 370 106" fill="none" stroke="#c084fc" strokeWidth="1" opacity="0.3" />
+
+      {/* Door handles */}
+      <rect x="220" y="100" width="18" height="3" rx="1.5" fill="#d8b4fe" opacity="0.5" />
+      <rect x="290" y="100" width="18" height="3" rx="1.5" fill="#d8b4fe" opacity="0.5" />
+
+      {/* Side skirt */}
+      <path d="M80 128 L370 128 L375 134 L75 134 Z" fill="#3b0764" opacity="0.8" />
+
+      {/* === FRONT WHEEL === */}
+      {/* Tire */}
+      <circle cx="320" cy="135" r="22" fill="url(#tireGrad)" />
+      <circle cx="320" cy="135" r="22" fill="none" stroke="#1c1c1c" strokeWidth="2" />
+      {/* Rim */}
+      <circle cx="320" cy="135" r="15" fill="url(#wheelGrad)" />
+      <circle cx="320" cy="135" r="7" fill="#1c1c1c" />
+      {/* Spokes */}
+      {[0,60,120,180,240,300].map((deg, i) => (
+        <line key={i}
+          x1={320 + 7 * Math.cos(deg * Math.PI / 180)}
+          y1={135 + 7 * Math.sin(deg * Math.PI / 180)}
+          x2={320 + 14 * Math.cos(deg * Math.PI / 180)}
+          y2={135 + 14 * Math.sin(deg * Math.PI / 180)}
+          stroke="#fbbf24" strokeWidth="2.5" strokeLinecap="round"
+        />
+      ))}
+      <circle cx="320" cy="135" r="3" fill="#fbbf24" />
+      {/* Brake caliper */}
+      <path d="M310 122 Q318 120 326 122 L326 128 Q318 126 310 128 Z" fill="#dc2626" opacity="0.8" />
+
+      {/* === REAR WHEEL === */}
+      {/* Tire */}
+      <circle cx="110" cy="135" r="22" fill="url(#tireGrad)" />
+      <circle cx="110" cy="135" r="22" fill="none" stroke="#1c1c1c" strokeWidth="2" />
+      {/* Rim */}
+      <circle cx="110" cy="135" r="15" fill="url(#wheelGrad)" />
+      <circle cx="110" cy="135" r="7" fill="#1c1c1c" />
+      {/* Spokes */}
+      {[0,60,120,180,240,300].map((deg, i) => (
+        <line key={i}
+          x1={110 + 7 * Math.cos(deg * Math.PI / 180)}
+          y1={135 + 7 * Math.sin(deg * Math.PI / 180)}
+          x2={110 + 14 * Math.cos(deg * Math.PI / 180)}
+          y2={135 + 14 * Math.sin(deg * Math.PI / 180)}
+          stroke="#fbbf24" strokeWidth="2.5" strokeLinecap="round"
+        />
+      ))}
+      <circle cx="110" cy="135" r="3" fill="#fbbf24" />
+
+      {/* Wheel arches */}
+      <path d="M88 130 Q90 108 110 107 Q130 108 132 130" fill="#4c1d95" stroke="#7e22ce" strokeWidth="1" />
+      <path d="M298 130 Q300 108 320 107 Q340 108 342 130" fill="#4c1d95" stroke="#7e22ce" strokeWidth="1" />
+
+      {/* Headlight beam glow */}
+      <path d="M382 100 L420 94 L420 115 L382 108 Z" fill="#fde68a" opacity="0.06" />
+    </svg>
+  )
+}
+
 function AnimatedCar() {
-  const [scope, animate] = useAnimate()
-  const [driven, setDriven] = useState(false)
+  const [phase, setPhase] = useState<'hidden' | 'enter' | 'drive'>('hidden')
 
   useEffect(() => {
-    // After 2.5 seconds, the car drives off screen to the right
-    const timer = setTimeout(async () => {
-      setDriven(true)
-      await animate(scope.current, {
-        x: ['0vw', '120vw'],
-        opacity: [1, 1, 0],
-      }, {
-        duration: 1.8,
-        ease: [0.4, 0, 1, 1],
-      })
-    }, 2500)
-    return () => clearTimeout(timer)
-  }, [animate, scope])
+    const t1 = setTimeout(() => setPhase('enter'), 300)
+    const t2 = setTimeout(() => setPhase('drive'), 3500)
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [])
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none" style={{ height: '220px' }}>
-      {/* Road */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0A0F1E] to-transparent" />
-      <div className="absolute bottom-6 left-0 right-0 h-px bg-purple-900/40" />
-      {/* Dashed center line animated */}
-      <motion.div
-        className="absolute bottom-14 left-0 h-px"
-        style={{ width: '200%' }}
-        animate={!driven ? { x: [0, -200] } : {}}
-        transition={{ duration: 1.5, repeat: driven ? 0 : Infinity, ease: 'linear' }}
-      >
-        <div
-          className="h-full"
-          style={{
-            backgroundImage: 'repeating-linear-gradient(90deg, rgba(147,51,234,0.3) 0px, rgba(147,51,234,0.3) 40px, transparent 40px, transparent 80px)',
-          }}
-        />
-      </motion.div>
+    <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ height: '200px', overflow: 'visible' }}>
+      {/* Road surface */}
+      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[#070B14] to-transparent" />
+      <div className="absolute bottom-10 left-0 right-0 h-px bg-purple-900/30" />
 
-      {/* Car (logo image) */}
+      {/* Moving road dashes */}
+      {phase !== 'hidden' && (
+        <motion.div
+          className="absolute bottom-16 left-0 h-px"
+          style={{ width: '300%' }}
+          animate={phase === 'drive' ? { x: [0, '-66%'] } : { x: [0, '-20%'] }}
+          transition={{
+            duration: phase === 'drive' ? 0.4 : 2,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        >
+          <div className="h-full" style={{
+            backgroundImage: 'repeating-linear-gradient(90deg, rgba(147,51,234,0.25) 0px, rgba(147,51,234,0.25) 50px, transparent 50px, transparent 100px)',
+          }} />
+        </motion.div>
+      )}
+
+      {/* The car */}
       <motion.div
-        ref={scope}
-        initial={{ x: '-30vw', opacity: 0 }}
-        animate={{ x: '15vw', opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute bottom-6"
-        style={{ left: 0 }}
+        className="absolute"
+        style={{ bottom: 28, left: 0 }}
+        animate={
+          phase === 'hidden' ? { x: '-460px', opacity: 0 } :
+          phase === 'enter'  ? { x: '12vw',   opacity: 1 } :
+                               { x: '110vw',  opacity: 1 }
+        }
+        transition={
+          phase === 'enter'
+            ? { duration: 1.6, ease: [0.22, 1, 0.36, 1] }
+            : phase === 'drive'
+            ? { duration: 1.0, ease: [0.6, 0, 1, 0.8] }
+            : { duration: 0 }
+        }
       >
-        {/* Headlight glow effect */}
+        {/* Headlight beam */}
         <motion.div
-          animate={{ opacity: [0.4, 0.9, 0.4], scaleX: [1, 1.3, 1] }}
-          transition={{ duration: 0.8, repeat: Infinity }}
-          className="absolute right-0 bottom-4 w-24 h-8 bg-purple-400/20 blur-xl rounded-full"
-          style={{ transformOrigin: 'right center' }}
+          animate={{ opacity: [0.3, 0.7, 0.3], scaleX: [1, 1.4, 1] }}
+          transition={{ duration: 1, repeat: Infinity }}
+          className="absolute right-0 top-8 w-32 h-6 rounded-full blur-lg"
+          style={{ background: 'radial-gradient(ellipse at right, rgba(253,230,138,0.3), transparent)', transformOrigin: 'right center' }}
         />
-        {/* Wheel spin blur under car */}
+        {/* Ground shadow */}
         <motion.div
-          animate={{ opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 0.3, repeat: Infinity }}
-          className="absolute bottom-0 left-8 right-8 h-2 bg-purple-900/40 blur-md rounded-full"
+          animate={{ scaleX: [1, 1.05, 1], opacity: [0.4, 0.5, 0.4] }}
+          transition={{ duration: 0.4, repeat: Infinity }}
+          className="absolute bottom-[-4px] left-8 right-8 h-3 rounded-full blur-md"
+          style={{ background: 'rgba(88,28,135,0.5)' }}
         />
-        <img
-          src="/logo.png"
-          alt="Tinting Evolution car"
-          className="h-36 w-auto relative z-10 drop-shadow-2xl"
-          style={{ filter: 'drop-shadow(0 0 20px rgba(147,51,234,0.5))' }}
-        />
-        {/* Speed lines */}
-        {!driven && (
+        {/* Speed lines (shown while driving) */}
+        {phase === 'drive' && (
           <motion.div
-            className="absolute top-1/2 -left-20 -translate-y-1/2 flex flex-col gap-2"
-            animate={{ opacity: [0, 0.6, 0], x: [-10, 0] }}
-            transition={{ duration: 0.4, repeat: Infinity }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 0.8, 0] }}
+            transition={{ duration: 0.15, repeat: Infinity }}
+            className="absolute top-1/2 -left-28 -translate-y-1/2 flex flex-col gap-2"
           >
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={i}
-                className="h-px bg-purple-500/50 rounded-full"
-                style={{ width: `${30 + i * 15}px`, marginLeft: `${i * -5}px` }}
-              />
+            {[40, 60, 35, 50, 30].map((w, i) => (
+              <div key={i} className="h-px rounded-full bg-purple-400/60" style={{ width: w, marginLeft: i % 2 === 0 ? 0 : 8 }} />
             ))}
           </motion.div>
         )}
+        <EvoCarSVG />
       </motion.div>
     </div>
   )
