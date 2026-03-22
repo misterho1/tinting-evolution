@@ -1,26 +1,9 @@
 'use client'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Zap, Shield, Star } from 'lucide-react'
+import { Shield, Star } from 'lucide-react'
 
 const films = [
-  {
-    id: 'dyed',
-    icon: Zap,
-    name: 'Dyed Film',
-    badge: 'Entry Level',
-    badgeColor: 'bg-gray-700/60 text-gray-300',
-    color: '#1a1a2e',
-    opacity: 0.65,
-    desc: 'Our entry-level film provides solid privacy, glare reduction, and a clean dark look. Great for daily drivers on a budget without sacrificing quality.',
-    specs: [
-      { label: 'UV Rejection', value: '99%' },
-      { label: 'Heat Rejection', value: '30–45%' },
-      { label: 'Glare Reduction', value: 'High' },
-      { label: 'Infrared Block', value: 'Basic' },
-    ],
-    best: 'Budget-conscious drivers who want clean looks',
-  },
   {
     id: 'carbon',
     icon: Shield,
