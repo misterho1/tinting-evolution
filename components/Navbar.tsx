@@ -30,36 +30,36 @@ export default function Navbar() {
           scrolled ? 'bg-navy-950/95 backdrop-blur-xl border-b border-purple-900/30 shadow-lg shadow-purple-950/20' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between h-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-4">
-            <img src="/logo.png" alt="Tinting Evolution" className="h-24 w-auto" style={{ mixBlendMode: 'screen' }} />
-            <span className="font-bebas text-5xl text-white tracking-wider hidden sm:block leading-none">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+            <img src="/logo.png" alt="Tinting Evolution" className="h-14 w-auto" style={{ mixBlendMode: 'screen' }} />
+            <span className="font-bebas text-3xl text-white tracking-wider hidden sm:block leading-none whitespace-nowrap">
               Tinting <span className="text-purple-500">Evolution</span>
             </span>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6 flex-shrink-0">
             {links.slice(0, 2).map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-2xl text-gray-300 hover:text-white transition-colors font-medium"
+                className="text-base text-gray-300 hover:text-white transition-colors font-medium whitespace-nowrap"
               >
                 {l.label}
               </Link>
             ))}
             <a
               href="tel:(801) 414-4486"
-              className="flex items-center gap-2 text-2xl text-gray-300 hover:text-white transition-colors font-medium"
+              className="flex items-center gap-1.5 text-base text-gray-300 hover:text-white transition-colors font-medium whitespace-nowrap"
             >
-              <Phone size={22} className="text-purple-500" />
+              <Phone size={15} className="text-purple-500 flex-shrink-0" />
               (801) 414-4486
             </a>
             <Link
               href="/book"
-              className="bg-purple-600 hover:bg-purple-500 text-white text-2xl font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-purple-600/30"
+              className="bg-purple-600 hover:bg-purple-500 text-white text-base font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-lg shadow-purple-600/30 whitespace-nowrap"
             >
               Book Free Quote
             </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            {open ? <X size={30} /> : <Menu size={30} />}
+            {open ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </motion.nav>
