@@ -39,11 +39,11 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-blue-500 text-sm font-medium tracking-widest uppercase mb-3">Reviews</p>
+          <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-3">Reviews</p>
           <h2 className="font-bebas text-5xl sm:text-6xl text-white mb-4">What Clients Say</h2>
           <div className="flex items-center justify-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={18} className="text-blue-400 fill-blue-400" />
+              <Star key={i} size={18} className="text-purple-400 fill-purple-400" />
             ))}
             <span className="text-gray-300 text-sm ml-2">5.0 · Google Reviews</span>
           </div>
@@ -61,13 +61,13 @@ export default function Testimonials() {
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(r.rating)].map((_, j) => (
-                  <Star key={j} size={14} className="text-blue-400 fill-blue-400" />
+                  <Star key={j} size={14} className="text-purple-400 fill-purple-400" />
                 ))}
               </div>
               <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-4">&ldquo;{r.text}&rdquo;</p>
-              <div className="border-t border-blue-900/30 pt-4">
+              <div className="border-t border-purple-900/30 pt-4">
                 <div className="font-medium text-white text-sm">{r.name}</div>
-                <div className="text-blue-500 text-xs mt-0.5">{r.vehicle}</div>
+                <div className="text-purple-500 text-xs mt-0.5">{r.vehicle}</div>
               </div>
             </motion.div>
           ))}

@@ -40,7 +40,7 @@ export default function AutoPricing() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-blue-500 text-sm font-medium tracking-widest uppercase mb-3">Transparent Pricing</p>
+          <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-3">Transparent Pricing</p>
           <h2 className="font-bebas text-5xl sm:text-6xl text-white mb-4">Auto Tinting Prices</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             No hidden fees, no surprises. Every job comes with our lifetime guarantee — we&apos;ll fix any imperfection immediately.
@@ -57,12 +57,12 @@ export default function AutoPricing() {
               transition={{ delay: i * 0.15 }}
               className={`relative rounded-2xl p-8 flex flex-col ${
                 pkg.featured
-                  ? 'gradient-border-blue bg-blue-600/5'
+                  ? 'gradient-border-blue bg-purple-600/5'
                   : 'glass-card'
               }`}
             >
               {pkg.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
                   Most Popular
                 </div>
               )}
@@ -71,7 +71,7 @@ export default function AutoPricing() {
                 <p className="text-gray-500 text-sm">{pkg.desc}</p>
               </div>
               <div className="mb-6">
-                <span className="font-bebas text-5xl text-blue-400">{pkg.price}</span>
+                <span className="font-bebas text-5xl text-purple-400">{pkg.price}</span>
                 {pkg.name !== 'Ceramic Upgrade' && (
                   <span className="text-gray-500 text-sm ml-2">starting at</span>
                 )}
@@ -79,7 +79,7 @@ export default function AutoPricing() {
               <ul className="space-y-3 flex-1 mb-8">
                 {pkg.features.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-sm text-gray-300">
-                    <Check size={15} className="text-blue-500 flex-shrink-0" />
+                    <Check size={15} className="text-purple-500 flex-shrink-0" />
                     {f}
                   </li>
                 ))}
@@ -88,8 +88,8 @@ export default function AutoPricing() {
                 href="/book"
                 className={`text-center font-semibold py-3 px-6 rounded-xl transition-all ${
                   pkg.featured
-                    ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30'
-                    : 'border border-blue-700/50 hover:border-blue-500 text-gray-200 hover:text-white'
+                    ? 'bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-600/30'
+                    : 'border border-purple-700/50 hover:border-purple-500 text-gray-200 hover:text-white'
                 }`}
               >
                 {pkg.cta}
@@ -105,7 +105,7 @@ export default function AutoPricing() {
           viewport={{ once: true }}
           className="flex items-center justify-center gap-3 mt-10 text-sm text-gray-400"
         >
-          <Shield size={16} className="text-blue-500" />
+          <Shield size={16} className="text-purple-500" />
           All prices include installation · Lifetime guarantee on every job · Book online for fastest scheduling
         </motion.div>
       </div>

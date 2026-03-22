@@ -38,7 +38,7 @@ export default function RootLayout({
         '@type': ['LocalBusiness', 'AutoRepair'],
         name: 'Tinting Evolution',
         description: 'Professional auto and residential window tinting with lifetime guarantee.',
-        telephone: 'PHONE_PLACEHOLDER',
+        telephone: '(801) 414-4486',
         priceRange: '$$',
         openingHoursSpecification: [
           {

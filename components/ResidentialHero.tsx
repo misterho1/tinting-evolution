@@ -7,11 +7,11 @@ export default function ResidentialHero() {
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24 pb-16">
       <div className="absolute inset-0 bg-[#070B14]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-blue-600/8 blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-purple-600/8 blur-[120px]" />
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: `linear-gradient(rgba(37,99,235,1) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(147,51,234,1) 1px, transparent 1px), linear-gradient(90deg, rgba(147,51,234,1) 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
         />
@@ -19,7 +19,7 @@ export default function ResidentialHero() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-blue-400 text-sm transition-colors mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-purple-400 text-sm transition-colors mb-8">
             <ArrowLeft size={14} />
             Back to Home
           </Link>
@@ -28,9 +28,9 @@ export default function ResidentialHero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-16 h-16 rounded-2xl bg-blue-600/15 border border-blue-600/25 flex items-center justify-center mx-auto mb-6"
+          className="w-16 h-16 rounded-2xl bg-purple-600/15 border border-purple-600/25 flex items-center justify-center mx-auto mb-6"
         >
-          <Home size={28} className="text-blue-400" />
+          <Home size={28} className="text-purple-400" />
         </motion.div>
 
         <motion.h1
@@ -39,7 +39,7 @@ export default function ResidentialHero() {
           transition={{ delay: 0.1 }}
           className="font-bebas text-5xl sm:text-7xl text-white mb-4 tracking-wide"
         >
-          Residential & Commercial <span className="text-blue-400">Tinting</span>
+          Residential & Commercial <span className="text-purple-400">Tinting</span>
         </motion.h1>
 
         <motion.p
@@ -58,7 +58,7 @@ export default function ResidentialHero() {
           className="flex flex-wrap gap-3 justify-center mb-10"
         >
           {['Single Family Home', 'Condo', 'Office', 'Retail', 'Storefront', 'Commercial'].map((v) => (
-            <span key={v} className="bg-blue-600/10 border border-blue-600/20 text-blue-300 text-sm px-4 py-1.5 rounded-full">
+            <span key={v} className="bg-purple-600/10 border border-purple-600/20 text-purple-300 text-sm px-4 py-1.5 rounded-full">
               {v}
             </span>
           ))}
@@ -72,13 +72,13 @@ export default function ResidentialHero() {
         >
           <Link
             href="/book"
-            className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-600/30"
+            className="bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-600/30"
           >
             Book Residential Tinting
           </Link>
           <a
-            href="tel:PHONE_PLACEHOLDER"
-            className="border border-blue-700/50 hover:border-blue-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
+            href="tel:(801) 414-4486"
+            className="border border-purple-700/50 hover:border-purple-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
           >
             Get a Free Estimate
           </a>

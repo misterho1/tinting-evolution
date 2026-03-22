@@ -14,11 +14,11 @@ export default function CTASection() {
           className="gradient-border-blue rounded-3xl p-10 sm:p-16"
         >
           {/* Glow */}
-          <div className="absolute inset-0 rounded-3xl bg-blue-600/5 pointer-events-none" />
+          <div className="absolute inset-0 rounded-3xl bg-purple-600/5 pointer-events-none" />
 
-          <p className="text-blue-500 text-sm font-medium tracking-widest uppercase mb-4">Ready to Upgrade?</p>
+          <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-4">Ready to Upgrade?</p>
           <h2 className="font-bebas text-5xl sm:text-7xl text-white mb-4 glow-blue">
-            Book Your <span className="text-blue-400">Free Quote</span>
+            Book Your <span className="text-purple-400">Free Quote</span>
           </h2>
           <p className="text-gray-300 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
             By appointment only. Same-day slots available. Every job backed by our lifetime guarantee.
@@ -26,14 +26,14 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/book"
-              className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-blue-600/30 hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-purple-600/30 hover:-translate-y-0.5"
             >
               <Calendar size={18} />
               Schedule Online
             </Link>
             <a
-              href="tel:PHONE_PLACEHOLDER"
-              className="flex items-center justify-center gap-2 border border-blue-700/50 hover:border-blue-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
+              href="tel:(801) 414-4486"
+              className="flex items-center justify-center gap-2 border border-purple-700/50 hover:border-purple-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
             >
               <Phone size={18} />
               Call Us Now

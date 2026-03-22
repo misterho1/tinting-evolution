@@ -46,7 +46,7 @@ export default function ResidentialBenefits() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-blue-500 text-sm font-medium tracking-widest uppercase mb-3">Why Tint Your Home</p>
+          <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-3">Why Tint Your Home</p>
           <h2 className="font-bebas text-5xl sm:text-6xl text-white mb-4">Benefits of Residential Film</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             Window tinting isn&apos;t just for cars. Home and commercial film is one of the smartest investments you can make.
@@ -61,10 +61,10 @@ export default function ResidentialBenefits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-2xl p-6 group hover:border-blue-600/30 transition-all"
+              className="glass-card rounded-2xl p-6 group hover:border-purple-600/30 transition-all"
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center mb-4 group-hover:bg-blue-600/20 transition-colors">
-                <b.icon size={20} className="text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-purple-600/10 border border-purple-600/20 flex items-center justify-center mb-4 group-hover:bg-purple-600/20 transition-colors">
+                <b.icon size={20} className="text-purple-400" />
               </div>
               <h3 className="font-semibold text-white mb-2">{b.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{b.desc}</p>
@@ -85,7 +85,7 @@ export default function ResidentialBenefits() {
           </p>
           <Link
             href="/book"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3 rounded-xl transition-all"
+            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3 rounded-xl transition-all"
           >
             Schedule Free Estimate
           </Link>

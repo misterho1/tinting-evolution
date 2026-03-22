@@ -41,7 +41,7 @@ export default function ServicesOverview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-blue-500 text-sm font-medium tracking-widest uppercase mb-3">What We Do</p>
+          <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-3">What We Do</p>
           <h2 className="font-bebas text-5xl sm:text-6xl text-white mb-4">
             Our Services
           </h2>
@@ -61,22 +61,22 @@ export default function ServicesOverview() {
               whileHover={{ y: -6 }}
               className="glass-card rounded-2xl p-7 flex flex-col group"
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-600/15 border border-blue-600/20 flex items-center justify-center mb-5 group-hover:bg-blue-600/25 transition-colors">
-                <s.icon size={22} className="text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-purple-600/15 border border-purple-600/20 flex items-center justify-center mb-5 group-hover:bg-purple-600/25 transition-colors">
+                <s.icon size={22} className="text-purple-400" />
               </div>
               <h3 className="font-bebas text-2xl text-white mb-3 tracking-wide">{s.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{s.desc}</p>
               <ul className="space-y-2 mb-6">
                 {s.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-300">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0" />
                     {f}
                   </li>
                 ))}
               </ul>
               <Link
                 href={s.href}
-                className="flex items-center justify-between text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all mt-auto border-t border-blue-900/30 pt-5"
+                className="flex items-center justify-between text-purple-400 hover:text-purple-300 text-sm font-medium group-hover:gap-3 transition-all mt-auto border-t border-purple-900/30 pt-5"
               >
                 {s.cta}
                 <ArrowRight size={16} />

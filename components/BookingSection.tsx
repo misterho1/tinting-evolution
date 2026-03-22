@@ -51,11 +51,11 @@ export default function BookingSection() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <div className="w-14 h-14 rounded-2xl bg-blue-600/15 border border-blue-600/25 flex items-center justify-center mx-auto mb-6">
-            <Calendar size={24} className="text-blue-400" />
+          <div className="w-14 h-14 rounded-2xl bg-purple-600/15 border border-purple-600/25 flex items-center justify-center mx-auto mb-6">
+            <Calendar size={24} className="text-purple-400" />
           </div>
           <h1 className="font-bebas text-5xl sm:text-7xl text-white mb-4 tracking-wide">
-            Book Your <span className="text-blue-400">Appointment</span>
+            Book Your <span className="text-purple-400">Appointment</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
             By appointment only. Select a time that works for you and we&apos;ll confirm within the hour.
@@ -70,15 +70,15 @@ export default function BookingSection() {
           className="flex flex-wrap gap-4 justify-center mb-10"
         >
           <div className="flex items-center gap-2 glass-card px-4 py-2.5 rounded-xl text-sm text-gray-300">
-            <Clock size={14} className="text-blue-500" />
+            <Clock size={14} className="text-purple-500" />
             By Appointment Only
           </div>
           <div className="flex items-center gap-2 glass-card px-4 py-2.5 rounded-xl text-sm text-gray-300">
-            <Shield size={14} className="text-blue-500" />
+            <Shield size={14} className="text-purple-500" />
             Lifetime Guarantee
           </div>
           <div className="flex items-center gap-2 glass-card px-4 py-2.5 rounded-xl text-sm text-gray-300">
-            <Calendar size={14} className="text-blue-500" />
+            <Calendar size={14} className="text-purple-500" />
             Same-Day Available
           </div>
         </motion.div>
@@ -91,22 +91,22 @@ export default function BookingSection() {
             transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-12 text-center"
           >
-            <Calendar size={48} className="text-blue-500/40 mx-auto mb-6" />
+            <Calendar size={48} className="text-purple-500/40 mx-auto mb-6" />
             <h3 className="font-bebas text-3xl text-white mb-4">Online Booking Coming Soon</h3>
             <p className="text-gray-400 mb-8 max-w-md mx-auto">
               Our online calendar is being set up. In the meantime, call or text us directly — we respond fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:PHONE_PLACEHOLDER"
-                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all"
+                href="tel:(801) 414-4486"
+                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all"
               >
                 <Phone size={18} />
                 Call to Book
               </a>
               <a
-                href="sms:PHONE_PLACEHOLDER"
-                className="flex items-center justify-center gap-2 border border-blue-700/50 hover:border-blue-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
+                href="sms:(801) 414-4486"
+                className="flex items-center justify-center gap-2 border border-purple-700/50 hover:border-purple-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
               >
                 Text Us
               </a>
@@ -139,7 +139,7 @@ export default function BookingSection() {
             { step: '03', title: 'Drive & Enjoy', desc: 'Leave with a lifetime guarantee on every window.' },
           ].map((s) => (
             <div key={s.step} className="glass-card rounded-xl p-5 text-center">
-              <div className="font-bebas text-3xl text-blue-600/40 mb-2">{s.step}</div>
+              <div className="font-bebas text-3xl text-purple-600/40 mb-2">{s.step}</div>
               <div className="font-semibold text-white mb-1">{s.title}</div>
               <div className="text-gray-400 text-sm">{s.desc}</div>
             </div>

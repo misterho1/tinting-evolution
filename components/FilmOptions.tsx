@@ -26,7 +26,7 @@ const films = [
     icon: Shield,
     name: 'Carbon Film',
     badge: 'Most Popular',
-    badgeColor: 'bg-blue-700/40 text-blue-300',
+    badgeColor: 'bg-purple-700/40 text-purple-300',
     color: '#0f172a',
     opacity: 0.75,
     desc: 'Carbon film delivers superior heat rejection, a matte finish, and won\'t fade or turn purple over time. The best value for performance and longevity.',
@@ -43,7 +43,7 @@ const films = [
     icon: Star,
     name: 'Ceramic Film',
     badge: 'Premium',
-    badgeColor: 'bg-blue-500/20 text-blue-200',
+    badgeColor: 'bg-purple-500/20 text-purple-200',
     color: '#0c1a3a',
     opacity: 0.85,
     desc: 'Our top-tier ceramic film blocks the most heat and infrared rays without darkening your windows. Crystal clear, signal-friendly, and built to last a lifetime.',
@@ -70,7 +70,7 @@ export default function FilmOptions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-blue-500 text-sm font-medium tracking-widest uppercase mb-3">Film Selection</p>
+          <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-3">Film Selection</p>
           <h2 className="font-bebas text-5xl sm:text-6xl text-white mb-4">Choose Your Film</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             Three tiers of window film — every one backed by our lifetime guarantee. We&apos;ll help you pick the right fit.
@@ -85,7 +85,7 @@ export default function FilmOptions() {
               onClick={() => setActive(f.id)}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                 active === f.id
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+                  ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30'
                   : 'glass-card text-gray-400 hover:text-white'
               }`}
             >
@@ -105,11 +105,11 @@ export default function FilmOptions() {
             className="grid md:grid-cols-2 gap-8 items-center"
           >
             {/* Window preview */}
-            <div className="relative rounded-2xl overflow-hidden border border-blue-900/30" style={{ aspectRatio: '4/3' }}>
+            <div className="relative rounded-2xl overflow-hidden border border-purple-900/30" style={{ aspectRatio: '4/3' }}>
               {/* Car interior mockup */}
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 to-navy-950" />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 to-navy-950" />
               {/* Window frame */}
-              <div className="absolute inset-6 rounded-xl border-2 border-blue-800/40">
+              <div className="absolute inset-6 rounded-xl border-2 border-purple-800/40">
                 {/* Tint overlay */}
                 <motion.div
                   key={`tint-${active}`}
@@ -120,7 +120,7 @@ export default function FilmOptions() {
                   style={{ backgroundColor: film.color }}
                 />
                 {/* Reflection */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 via-transparent to-transparent" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-500/5 via-transparent to-transparent" />
                 {/* Label */}
                 <div className="absolute bottom-3 left-3 right-3 text-center">
                   <span className={`text-xs px-3 py-1 rounded-full font-medium ${film.badgeColor}`}>
@@ -146,7 +146,7 @@ export default function FilmOptions() {
                 {film.specs.map((s) => (
                   <div key={s.label} className="glass-card rounded-xl p-3">
                     <div className="text-gray-500 text-xs mb-1">{s.label}</div>
-                    <div className="text-blue-300 font-semibold text-sm">{s.value}</div>
+                    <div className="text-purple-300 font-semibold text-sm">{s.value}</div>
                   </div>
                 ))}
               </div>
@@ -158,7 +158,7 @@ export default function FilmOptions() {
 
               <a
                 href="/book"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition-all"
+                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl transition-all"
               >
                 Book with {film.name}
               </a>

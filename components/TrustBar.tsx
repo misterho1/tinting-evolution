@@ -17,7 +17,7 @@ const doubled = [...items, ...items]
 
 export default function TrustBar() {
   return (
-    <section className="py-6 bg-navy-900/30 border-y border-blue-900/20 overflow-hidden">
+    <section className="py-6 bg-navy-900/30 border-y border-purple-900/20 overflow-hidden">
       <div className="flex">
         <motion.div
           animate={{ x: ['0%', '-50%'] }}
@@ -26,9 +26,9 @@ export default function TrustBar() {
         >
           {doubled.map((item, i) => (
             <div key={i} className="flex items-center gap-3 flex-shrink-0">
-              <item.icon size={16} className="text-blue-500" />
+              <item.icon size={16} className="text-purple-500" />
               <span className="text-gray-300 text-sm font-medium">{item.text}</span>
-              <span className="text-blue-800 ml-6">◆</span>
+              <span className="text-purple-800 ml-6">◆</span>
             </div>
           ))}
         </motion.div>

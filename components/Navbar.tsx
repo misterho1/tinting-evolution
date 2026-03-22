@@ -27,7 +27,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-[9990] transition-all duration-300 ${
-          scrolled ? 'bg-navy-950/95 backdrop-blur-xl border-b border-blue-900/30 shadow-lg shadow-blue-950/20' : 'bg-transparent'
+          scrolled ? 'bg-navy-950/95 backdrop-blur-xl border-b border-purple-900/30 shadow-lg shadow-purple-950/20' : 'bg-transparent'
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
@@ -35,7 +35,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <img src="/logo.png" alt="Tinting Evolution" className="h-10 w-auto" />
             <span className="font-bebas text-xl text-white tracking-wider hidden sm:block">
-              Tinting <span className="text-blue-500">Evolution</span>
+              Tinting <span className="text-purple-500">Evolution</span>
             </span>
           </Link>
 
@@ -51,15 +51,15 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:PHONE_PLACEHOLDER"
+              href="tel:(801) 414-4486"
               className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
             >
-              <Phone size={14} className="text-blue-500" />
-              PHONE_PLACEHOLDER
+              <Phone size={14} className="text-purple-500" />
+              (801) 414-4486
             </a>
             <Link
               href="/book"
-              className="bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              className="bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
             >
               Book Free Quote
             </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-16 left-0 right-0 z-[9989] bg-navy-950/98 backdrop-blur-xl border-b border-blue-900/30"
+            className="fixed top-16 left-0 right-0 z-[9989] bg-navy-950/98 backdrop-blur-xl border-b border-purple-900/30"
           >
             <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col gap-4">
               {links.map((l) => (
@@ -91,17 +91,17 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg text-gray-200 hover:text-blue-400 py-2 border-b border-blue-900/20"
+                  className="text-lg text-gray-200 hover:text-purple-400 py-2 border-b border-purple-900/20"
                 >
                   {l.label}
                 </Link>
               ))}
               <a
-                href="tel:PHONE_PLACEHOLDER"
-                className="flex items-center gap-2 text-lg text-gray-200 hover:text-blue-400 py-2"
+                href="tel:(801) 414-4486"
+                className="flex items-center gap-2 text-lg text-gray-200 hover:text-purple-400 py-2"
               >
-                <Phone size={16} className="text-blue-500" />
-                PHONE_PLACEHOLDER
+                <Phone size={16} className="text-purple-500" />
+                (801) 414-4486
               </a>
             </div>
           </motion.div>
@@ -109,16 +109,16 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Mobile sticky bottom CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-[9988] bg-navy-950/95 backdrop-blur-xl border-t border-blue-900/30 px-4 py-3 flex gap-3">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-[9988] bg-navy-950/95 backdrop-blur-xl border-t border-purple-900/30 px-4 py-3 flex gap-3">
         <a
-          href="tel:PHONE_PLACEHOLDER"
-          className="flex-1 text-center py-3 rounded-xl border border-blue-700/50 text-blue-400 text-sm font-medium"
+          href="tel:(801) 414-4486"
+          className="flex-1 text-center py-3 rounded-xl border border-purple-700/50 text-purple-400 text-sm font-medium"
         >
           Call Now
         </a>
         <Link
           href="/book"
-          className="flex-1 text-center py-3 rounded-xl bg-blue-600 text-white text-sm font-medium"
+          className="flex-1 text-center py-3 rounded-xl bg-purple-600 text-white text-sm font-medium"
         >
           Book Free Quote
         </Link>

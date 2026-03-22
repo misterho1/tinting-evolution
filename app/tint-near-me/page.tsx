@@ -33,25 +33,25 @@ export default function TintNearMePage() {
       {/* Hero */}
       <section className="relative overflow-hidden pt-16 pb-16">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-blue-600/10 blur-[100px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-purple-600/10 blur-[100px]" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => <Star key={i} size={16} className="text-blue-400 fill-blue-400" />)}
+            {[...Array(5)].map((_, i) => <Star key={i} size={16} className="text-purple-400 fill-purple-400" />)}
             <span className="text-gray-400 text-sm ml-2">5-Star Rated</span>
           </div>
           <h1 className="font-bebas text-5xl sm:text-7xl text-white mb-4">
-            Professional Window <span className="text-blue-400">Tinting</span>
+            Professional Window <span className="text-purple-400">Tinting</span>
           </h1>
           <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
             Auto, residential & commercial tinting. Ceramic, carbon, and dyed film. Lifetime guarantee on every job.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-blue-600/30">
+            <Link href="/book" className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-purple-600/30">
               <Calendar size={18} /> Book Free Quote
             </Link>
-            <a href="tel:PHONE_PLACEHOLDER" className="flex items-center justify-center gap-2 border border-blue-700/50 hover:border-blue-500 text-gray-200 font-semibold px-8 py-4 rounded-xl transition-all">
-              <Phone size={18} /> PHONE_PLACEHOLDER
+            <a href="tel:(801) 414-4486" className="flex items-center justify-center gap-2 border border-purple-700/50 hover:border-purple-500 text-gray-200 font-semibold px-8 py-4 rounded-xl transition-all">
+              <Phone size={18} /> (801) 414-4486
             </a>
           </div>
         </div>
@@ -67,13 +67,13 @@ export default function TintNearMePage() {
               { name: 'Truck / SUV', price: '$300', features: ['All windows', 'Dyed or Carbon', 'Lifetime guarantee'], featured: true },
               { name: 'Ceramic Add-On', price: '+$200', features: ['Any vehicle', 'Max heat block', 'Signal-friendly'] },
             ].map((p) => (
-              <div key={p.name} className={`rounded-2xl p-6 text-center ${p.featured ? 'bg-blue-600/10 border border-blue-500/30' : 'bg-[#0D1526] border border-blue-900/20'}`}>
+              <div key={p.name} className={`rounded-2xl p-6 text-center ${p.featured ? 'bg-purple-600/10 border border-purple-500/30' : 'bg-[#0D1526] border border-purple-900/20'}`}>
                 <div className="font-bebas text-lg text-gray-300 mb-1">{p.name}</div>
-                <div className="font-bebas text-4xl text-blue-400 mb-4">{p.price}</div>
+                <div className="font-bebas text-4xl text-purple-400 mb-4">{p.price}</div>
                 <ul className="space-y-2">
                   {p.features.map((f) => (
                     <li key={f} className="flex items-center justify-center gap-2 text-sm text-gray-400">
-                      <Check size={13} className="text-blue-500" />{f}
+                      <Check size={13} className="text-purple-500" />{f}
                     </li>
                   ))}
                 </ul>
@@ -89,7 +89,7 @@ export default function TintNearMePage() {
           <h2 className="font-bebas text-4xl text-center text-white mb-8">Common Questions</h2>
           <div className="space-y-4">
             {faqs.map((f) => (
-              <div key={f.q} className="bg-[#0D1526] border border-blue-900/20 rounded-xl p-5">
+              <div key={f.q} className="bg-[#0D1526] border border-purple-900/20 rounded-xl p-5">
                 <div className="font-semibold text-white mb-2">{f.q}</div>
                 <div className="text-gray-400 text-sm">{f.a}</div>
               </div>
@@ -99,11 +99,11 @@ export default function TintNearMePage() {
       </section>
 
       {/* Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-navy-950/95 backdrop-blur-xl border-t border-blue-900/30 px-4 py-3 flex gap-3 z-50">
-        <a href="tel:PHONE_PLACEHOLDER" className="flex-1 text-center py-3 rounded-xl border border-blue-700/50 text-blue-400 font-medium">
+      <div className="fixed bottom-0 left-0 right-0 bg-navy-950/95 backdrop-blur-xl border-t border-purple-900/30 px-4 py-3 flex gap-3 z-50">
+        <a href="tel:(801) 414-4486" className="flex-1 text-center py-3 rounded-xl border border-purple-700/50 text-purple-400 font-medium">
           Call Now
         </a>
-        <Link href="/book" className="flex-1 text-center py-3 rounded-xl bg-blue-600 text-white font-medium">
+        <Link href="/book" className="flex-1 text-center py-3 rounded-xl bg-purple-600 text-white font-medium">
           Book Free Quote
         </Link>
       </div>
