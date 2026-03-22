@@ -93,7 +93,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 
   return (
-    <section ref={ref} className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section ref={ref} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background — simplified for mobile perf */}
       <motion.div style={{ y }} className="absolute inset-0">
         <div className="absolute inset-0 bg-[#070B14]" />
@@ -120,7 +120,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <motion.div style={{ opacity }} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 w-full pt-24 pb-8 text-center">
+      <motion.div style={{ opacity }} className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-8 flex flex-col items-center text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
