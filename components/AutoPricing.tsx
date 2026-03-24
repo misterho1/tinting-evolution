@@ -5,28 +5,31 @@ import { Check, Shield } from 'lucide-react'
 
 const packages = [
   {
-    name: 'Sedan',
-    price: '$250',
-    desc: 'Perfect for cars, coupes & hatchbacks',
-    features: ['Full car coverage', 'All windows included', 'Carbon film', 'Lifetime guarantee', 'Same-day service available'],
-    cta: 'Book Sedan Tint',
+    name: 'Carbon Tint',
+    price: '$150',
+    desc: 'Sedan or 4-door truck — 4 doors + back window',
+    features: ['4 door windows included', 'Back window included', 'Carbon film', 'Heat & UV rejection', 'Lifetime guarantee'],
+    cta: 'Book Carbon Tint',
     featured: false,
+    badge: null,
   },
   {
-    name: 'Truck / SUV',
+    name: 'Ceramic Tint',
     price: '$300',
-    desc: 'Trucks, SUVs & larger vehicles',
-    features: ['Full vehicle coverage', 'All windows included', 'Carbon film', 'Lifetime guarantee', 'Same-day service available'],
-    cta: 'Book Truck/SUV Tint',
+    desc: 'Sedan or 4-door truck — 4 doors + back window',
+    features: ['4 door windows included', 'Back window included', 'Premium ceramic film', 'Max heat rejection (60–80%)', 'Signal-friendly · Lifetime guarantee'],
+    cta: 'Book Ceramic Tint',
     featured: true,
+    badge: 'Most Popular',
   },
   {
-    name: 'Ceramic Upgrade',
-    price: '+$200',
-    desc: 'Add to any package above',
-    features: ['Upgrade any vehicle', 'Maximum heat rejection', '60–80% heat block', 'Signal-friendly', 'Lifetime guarantee'],
-    cta: 'Upgrade to Ceramic',
+    name: 'Windshield',
+    price: '$50',
+    desc: 'Windshield strip or full front windshield',
+    features: ['Visor strip — $50', 'Full front windshield — $200', 'Add-on to any package', 'Carbon or ceramic available', 'Lifetime guarantee'],
+    cta: 'Add Windshield Tint',
     featured: false,
+    badge: 'Add-On',
   },
 ]
 
@@ -61,9 +64,9 @@ export default function AutoPricing() {
                   : 'glass-card'
               }`}
             >
-              {pkg.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
-                  Most Popular
+              {pkg.badge && (
+                <div className={`absolute -top-3 left-1/2 -translate-x-1/2 text-white text-xs font-semibold px-4 py-1 rounded-full ${pkg.featured ? 'bg-purple-600' : 'bg-blue-700'}`}>
+                  {pkg.badge}
                 </div>
               )}
               <div className="mb-6">
@@ -72,9 +75,7 @@ export default function AutoPricing() {
               </div>
               <div className="mb-6">
                 <span className="font-bebas text-5xl text-purple-400">{pkg.price}</span>
-                {pkg.name !== 'Ceramic Upgrade' && (
-                  <span className="text-gray-500 text-sm ml-2">starting at</span>
-                )}
+                <span className="text-gray-500 text-sm ml-2">starting at</span>
               </div>
               <ul className="space-y-3 flex-1 mb-8">
                 {pkg.features.map((f) => (
