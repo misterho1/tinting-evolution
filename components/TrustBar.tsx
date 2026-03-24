@@ -10,7 +10,7 @@ const items = [
   { icon: ThumbsUp, text: '100% Satisfaction' },
   { icon: Zap, text: 'Fast Turnaround' },
   { icon: Shield, text: 'Premium Film Brands' },
-  { icon: Star, text: 'Auto & Residential' },
+  { icon: Star, text: 'Ceramic & Carbon Film' },
 ]
 
 const doubled = [...items, ...items]

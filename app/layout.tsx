@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Tinting Evolution | Professional Window Tinting — Auto & Residential',
+  title: 'Tinting Evolution | Professional Auto Window Tinting',
   description: 'Tinting Evolution offers premium auto window tinting. Ceramic and carbon film with lifetime guarantee, by appointment. Book your free quote today.',
   keywords: 'window tinting, auto tinting, car tinting, ceramic tint, carbon tint, professional tinting, lifetime guarantee',
   openGraph: {

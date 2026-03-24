@@ -12,8 +12,8 @@ const reviews = [
   {
     name: 'Ashley R.',
     rating: 5,
-    text: 'Had my home windows tinted and couldn\'t be happier. The glare in my living room is completely gone and my energy bill actually dropped. Professional, fast, and clean.',
-    vehicle: 'Residential Client',
+    text: 'Got ceramic tint on my SUV and the difference is night and day. No more scorching seats in summer. Super clean install, no bubbles, and the lifetime guarantee sealed the deal.',
+    vehicle: 'Toyota 4Runner',
   },
   {
     name: 'Jordan M.',
