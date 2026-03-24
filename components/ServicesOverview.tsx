@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Car, Home, Building2, ArrowRight } from 'lucide-react'
+import { Car, Shield, Star, ArrowRight } from 'lucide-react'
 
 const services = [
   {
@@ -13,20 +13,20 @@ const services = [
     cta: 'View Auto Services',
   },
   {
-    icon: Home,
-    title: 'Residential Tinting',
-    desc: 'Keep your home cooler, protect your furniture, and increase privacy. Professional installation on all window types.',
-    features: ['Single & Double Pane', 'UV & Heat Rejection', 'Privacy Films'],
-    href: '/services/residential',
-    cta: 'View Home Services',
+    icon: Shield,
+    title: 'Ceramic Film',
+    desc: 'Our top-tier film blocks up to 80% of solar heat and 99%+ UV rays. Crystal clear, signal-friendly, and built to last a lifetime.',
+    features: ['Max Heat Rejection', 'Signal-Friendly', 'Lifetime Guarantee'],
+    href: '/services/auto',
+    cta: 'Learn About Ceramic',
   },
   {
-    icon: Building2,
-    title: 'Commercial Tinting',
-    desc: 'Reduce energy costs and protect your workspace. We service offices, storefronts, and commercial properties.',
-    features: ['Office & Retail', 'Safety & Security Film', 'Energy Savings'],
-    href: '/services/residential',
-    cta: 'View Commercial',
+    icon: Star,
+    title: 'Carbon Film',
+    desc: 'Superior heat rejection with a sleek matte finish. Won\'t fade or turn purple over time — the best value for performance.',
+    features: ['Great Value', 'No Fading', 'Lifetime Guarantee'],
+    href: '/services/auto',
+    cta: 'Learn About Carbon',
   },
 ]
 
@@ -46,7 +46,7 @@ export default function ServicesOverview() {
             Our Services
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            From daily drivers to dream homes — we tint it all with precision, speed, and a lifetime guarantee on every job.
+            From daily drivers to dream rides — we tint it all with precision, speed, and a lifetime guarantee on every job.
           </p>
         </motion.div>
 

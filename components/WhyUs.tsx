@@ -11,7 +11,7 @@ const perks = [
   {
     icon: Award,
     title: 'Premium Film Only',
-    desc: 'We use only top-tier ceramic, carbon, and dyed films from trusted brands. No cheap materials — ever.',
+    desc: 'We use only top-tier ceramic and carbon films from trusted brands. No cheap materials — ever.',
   },
   {
     icon: Zap,
@@ -38,7 +38,7 @@ export default function WhyUs() {
           <p className="text-purple-500 text-sm font-medium tracking-widest uppercase mb-3">Why Choose Us</p>
           <h2 className="font-bebas text-5xl sm:text-6xl text-white mb-4">The Evolution Difference</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            We don&apos;t cut corners. Every job gets our full attention — because your car or home deserves nothing less.
+            We don&apos;t cut corners. Every job gets our full attention — because your vehicle deserves nothing less.
           </p>
         </motion.div>
 

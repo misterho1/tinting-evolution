@@ -6,7 +6,6 @@ import { Menu, X, Phone } from 'lucide-react'
 
 const links = [
   { label: 'Auto Tinting', href: '/services/auto' },
-  { label: 'Residential', href: '/services/residential' },
   { label: 'Book Now', href: '/book' },
 ]
 

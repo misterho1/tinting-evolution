@@ -17,7 +17,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
-              Professional auto and residential window tinting backed by a lifetime guarantee. We take pride in every install.
+              Professional auto window tinting backed by a lifetime guarantee. We take pride in every install.
             </p>
             <a
               href="https://www.instagram.com/tintingevolution/"
@@ -35,8 +35,6 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Services</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link href="/services/auto" className="hover:text-purple-400 transition-colors">Auto Window Tinting</Link></li>
-              <li><Link href="/services/residential" className="hover:text-purple-400 transition-colors">Residential Tinting</Link></li>
-              <li><Link href="/services/residential" className="hover:text-purple-400 transition-colors">Commercial Tinting</Link></li>
               <li><Link href="/services/auto" className="hover:text-purple-400 transition-colors">Ceramic Film</Link></li>
               <li><Link href="/services/auto" className="hover:text-purple-400 transition-colors">Carbon Film</Link></li>
             </ul>

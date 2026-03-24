@@ -5,7 +5,7 @@ import BookingSection from '@/components/BookingSection'
 
 export const metadata: Metadata = {
   title: 'Book Window Tinting | Tinting Evolution',
-  description: 'Schedule your auto or residential window tinting appointment online. By appointment only. Lifetime guarantee on every job.',
+  description: 'Schedule your auto window tinting appointment online. By appointment only. Lifetime guarantee on every job.',
 }
 
 export default function BookPage() {

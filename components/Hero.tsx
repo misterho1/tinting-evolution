@@ -141,7 +141,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-300 text-base sm:text-xl max-w-2xl mx-auto mb-3 leading-relaxed"
           >
-            Premium window tinting for your <strong className="text-white">car</strong>, <strong className="text-white">home</strong> & <strong className="text-white">business</strong>. Backed by a <strong className="text-purple-400">lifetime guarantee</strong>.
+            Premium auto window tinting for your <strong className="text-white">car</strong>, <strong className="text-white">truck</strong> & <strong className="text-white">SUV</strong>. Backed by a <strong className="text-purple-400">lifetime guarantee</strong>.
           </motion.p>
 
           <motion.p
@@ -171,9 +171,6 @@ export default function Hero() {
             </Link>
             <Link href="/services/auto" className="border border-purple-700/50 hover:border-purple-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all text-center">
               Auto Tinting →
-            </Link>
-            <Link href="/services/residential" className="border border-purple-700/50 hover:border-purple-500 text-gray-200 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all text-center">
-              Home Tinting →
             </Link>
           </motion.div>
 

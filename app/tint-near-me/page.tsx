@@ -4,7 +4,7 @@ import { Shield, Star, Phone, Calendar, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Window Tinting Near Me | Tinting Evolution',
-  description: 'Professional auto and residential window tinting. Ceramic, carbon & dyed film. Lifetime guarantee. Book your free quote today.',
+  description: 'Professional auto window tinting. Ceramic and carbon film. Lifetime guarantee. Book your free quote today.',
   robots: 'noindex',
 }
 
@@ -12,7 +12,7 @@ const faqs = [
   { q: 'How long does auto tinting take?', a: 'Most vehicles take 2–4 hours depending on size and number of windows.' },
   { q: 'Do you offer a guarantee?', a: 'Yes — lifetime guarantee on every job. Any imperfections and we fix it immediately, no questions asked.' },
   { q: 'What\'s the difference between ceramic and carbon film?', a: 'Ceramic film rejects more heat (60–80%) and is signal-friendly. Carbon is great value with 45–55% heat rejection. Both are backed by our lifetime warranty.' },
-  { q: 'Do you tint residential windows?', a: 'Absolutely. We tint homes, condos, offices, and commercial properties.' },
+  { q: 'What vehicles do you tint?', a: 'We tint sedans, trucks, SUVs, sports cars, and more. Any vehicle with windows, we can tint it.' },
 ]
 
 export default function TintNearMePage() {
@@ -44,7 +44,7 @@ export default function TintNearMePage() {
             Professional Window <span className="text-purple-400">Tinting</span>
           </h1>
           <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
-            Auto, residential & commercial tinting. Ceramic, carbon, and dyed film. Lifetime guarantee on every job.
+            Auto window tinting with ceramic and carbon film. Lifetime guarantee on every job.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book" className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-purple-600/30">
@@ -63,9 +63,9 @@ export default function TintNearMePage() {
           <h2 className="font-bebas text-4xl text-center text-white mb-8">Auto Tinting Prices</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { name: 'Sedan', price: '$250', features: ['All windows', 'Dyed or Carbon', 'Lifetime guarantee'] },
-              { name: 'Truck / SUV', price: '$300', features: ['All windows', 'Dyed or Carbon', 'Lifetime guarantee'], featured: true },
-              { name: 'Ceramic Add-On', price: '+$200', features: ['Any vehicle', 'Max heat block', 'Signal-friendly'] },
+              { name: 'Carbon Tint', price: '$150', features: ['4 doors + back', 'Carbon film', 'Lifetime guarantee'] },
+              { name: 'Ceramic Tint', price: '$300', features: ['4 doors + back', 'Premium ceramic', 'Lifetime guarantee'], featured: true },
+              { name: 'Windshield', price: '$50', features: ['Visor strip $50', 'Full windshield $200', 'Add-on to any package'] },
             ].map((p) => (
               <div key={p.name} className={`rounded-2xl p-6 text-center ${p.featured ? 'bg-purple-600/10 border border-purple-500/30' : 'bg-[#0D1526] border border-purple-900/20'}`}>
                 <div className="font-bebas text-lg text-gray-300 mb-1">{p.name}</div>

@@ -8,7 +8,7 @@ import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: 'Auto Window Tinting | Tinting Evolution',
-  description: 'Professional auto window tinting for sedans, trucks, and SUVs. Ceramic, carbon & dyed film. Lifetime guarantee. Book your appointment today.',
+  description: 'Professional auto window tinting for sedans, trucks, and SUVs. Ceramic and carbon film. Lifetime guarantee. Book your appointment today.',
 }
 
 export default function AutoTintingPage() {

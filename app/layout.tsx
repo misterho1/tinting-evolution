@@ -3,6 +3,8 @@ import { Bebas_Neue, DM_Sans } from 'next/font/google'
 import './globals.css'
 import CustomCursor from '@/components/CustomCursor'
 import ScrollProgress from '@/components/ScrollProgress'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { GoogleTagManagerHead, GoogleTagManagerBody } from '@/components/GoogleTagManager'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -17,11 +19,11 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: 'Tinting Evolution | Professional Window Tinting — Auto & Residential',
-  description: 'Tinting Evolution offers premium auto, residential & commercial window tinting. Lifetime guarantee, multiple film options, by appointment. Book your free quote today.',
-  keywords: 'window tinting, auto tinting, residential tinting, home window tint, ceramic tint, carbon tint, professional tinting, lifetime guarantee',
+  description: 'Tinting Evolution offers premium auto window tinting. Ceramic and carbon film with lifetime guarantee, by appointment. Book your free quote today.',
+  keywords: 'window tinting, auto tinting, car tinting, ceramic tint, carbon tint, professional tinting, lifetime guarantee',
   openGraph: {
-    title: 'Tinting Evolution | Professional Window Tinting',
-    description: 'Premium auto & residential window tinting with a lifetime guarantee. Book online today.',
+    title: 'Tinting Evolution | Professional Auto Window Tinting',
+    description: 'Premium auto window tinting with ceramic and carbon film. Lifetime guarantee. Book online today.',
     type: 'website',
   },
 }
@@ -37,7 +39,7 @@ export default function RootLayout({
       {
         '@type': ['LocalBusiness', 'AutoRepair'],
         name: 'Tinting Evolution',
-        description: 'Professional auto and residential window tinting with lifetime guarantee.',
+        description: 'Professional auto window tinting with lifetime guarantee.',
         telephone: '(801) 414-4486',
         priceRange: '$$',
         openingHoursSpecification: [
@@ -52,9 +54,8 @@ export default function RootLayout({
           name: 'Window Tinting Services',
           itemListElement: [
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Auto Window Tinting' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Window Tinting' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Window Tinting' } },
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ceramic Window Film' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Carbon Window Film' } },
           ],
         },
       },
@@ -70,6 +71,9 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-navy-950 text-white antialiased">
+        <GoogleTagManagerBody />
+        <GoogleAnalytics />
+        <GoogleTagManagerHead />
         <CustomCursor />
         <ScrollProgress />
         {children}
