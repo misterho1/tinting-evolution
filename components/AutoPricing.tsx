@@ -25,6 +25,7 @@ const packages = [
   {
     name: 'Windshield',
     price: '$200',
+    subPrice: 'from $50 for visor strip',
     desc: 'Full front windshield — $50 for visor strip only',
     features: ['Full front windshield tint', 'Visor strip available — $50', 'Add-on to any package', 'Carbon or ceramic available', 'Lifetime guarantee'],
     cta: 'Add Windshield Tint',
@@ -75,7 +76,7 @@ export default function AutoPricing() {
               </div>
               <div className="mb-6">
                 <span className="font-bebas text-5xl text-purple-400">{pkg.price}</span>
-                <span className="text-gray-500 text-sm ml-2">starting at</span>
+                <span className="text-gray-500 text-sm ml-2">{pkg.subPrice || 'starting at'}</span>
               </div>
               <ul className="space-y-3 flex-1 mb-8">
                 {pkg.features.map((f) => (
