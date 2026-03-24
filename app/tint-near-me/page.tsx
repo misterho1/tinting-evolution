@@ -65,7 +65,7 @@ export default function TintNearMePage() {
             {[
               { name: 'Carbon Tint', price: '$150', features: ['4 doors + back', 'Carbon film', 'Lifetime guarantee'] },
               { name: 'Ceramic Tint', price: '$300', features: ['4 doors + back', 'Premium ceramic', 'Lifetime guarantee'], featured: true },
-              { name: 'Windshield', price: '$50', features: ['Visor strip $50', 'Full windshield $200', 'Add-on to any package'] },
+              { name: 'Windshield', price: '$200', features: ['Full windshield tint', 'Visor strip — $50', 'Add-on to any package'] },
             ].map((p) => (
               <div key={p.name} className={`rounded-2xl p-6 text-center ${p.featured ? 'bg-purple-600/10 border border-purple-500/30' : 'bg-[#0D1526] border border-purple-900/20'}`}>
                 <div className="font-bebas text-lg text-gray-300 mb-1">{p.name}</div>

@@ -24,9 +24,9 @@ const packages = [
   },
   {
     name: 'Windshield',
-    price: '$50',
-    desc: 'Windshield strip or full front windshield',
-    features: ['Visor strip — $50', 'Full front windshield — $200', 'Add-on to any package', 'Carbon or ceramic available', 'Lifetime guarantee'],
+    price: '$200',
+    desc: 'Full front windshield — $50 for visor strip only',
+    features: ['Full front windshield tint', 'Visor strip available — $50', 'Add-on to any package', 'Carbon or ceramic available', 'Lifetime guarantee'],
     cta: 'Add Windshield Tint',
     featured: false,
     badge: 'Add-On',
